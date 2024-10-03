@@ -33,7 +33,7 @@ using (var scope = app.Services.CreateScope()){
     try{
         var contex = services.GetRequiredService<DataContex>();
         contex.Database.Migrate();
-        seed.SeedBata(contex);
+        Seed.SeedBata(contex);
     }
 
     catch(System.Exception e)
