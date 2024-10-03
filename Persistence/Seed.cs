@@ -18,7 +18,7 @@ new post  {
     },
     new post  {
      Title = "Third Post",
-     Body = "The placeholder text, beginning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.",
+     Body = "The placeholder text, begin ning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.",
      Date = DateTime.Now.AddDays(-4)
     },
      new post  {
