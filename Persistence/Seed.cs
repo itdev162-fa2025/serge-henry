@@ -20,11 +20,6 @@ new post  {
      Title = "Third Post",
      Body = "The placeholder text, begin ning with the line “Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin.",
      Date = DateTime.Now.AddDays(-4)
-    },
-     new post  {
-     Title = "forth Post",
-     Body = "The decade that brought us Star Trek and Doctor Who also resurrected Cicero—or at least what used to be Cicero—in an attempt to make the days before computerized design a little less painstaking.",
-     Date = DateTime.Now.AddDays(-1)
     }
     
    };
