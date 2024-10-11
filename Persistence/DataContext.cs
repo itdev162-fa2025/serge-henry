@@ -6,7 +6,7 @@ namespace Persistence
  public class DataContex: DbContext
  {
   public DbSet<weatherForecast> WeatherForecasts {get; set;}
-  public DbSet<post> Posts {get; set;}
+  public DbSet<Post> Posts {get; set;}
   public string DbPath {get;} 
   public DataContex(){
 

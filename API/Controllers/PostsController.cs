@@ -18,7 +18,7 @@ namespace API.Controllers
   // Get api/posts
 
   [HttpGet(Name ="Getposts")]
-  public ActionResult<List<post>> Get()
+  public ActionResult<List<Post>> Get()
   {
    return this._contex.Posts.ToList();
   }
