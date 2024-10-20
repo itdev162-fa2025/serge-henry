@@ -1,5 +1,5 @@
 
-
+using Microsoft.EntityFrameworkCore;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,7 +21,28 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors(policy => policy
+.AllowAnyHeader()
+.AllowAnyHeader()
+.WithOrigins("http://localhost:4200")
+);
 
+app.MapControllers();
+
+using (var scope = app.Services.CreateScope()){
+    var services = scope.ServiceProvider;
+    try{
+        var contex = services.GetRequiredService<DataContex>();
+        contex.Database.Migrate();
+        Seed.SeedBata(contex);
+    }
+
+    catch(System.Exception e)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(e, "An error occured while seeding the database");
+    }
+}
 //app.UseHttpsRedirection();
 app.UseCors(policy =>policy
 .AllowAnyHeader()
